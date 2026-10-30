@@ -1,0 +1,2131 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Velin Alivia Putri - Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Inter & Font Awesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Plus Jakarta Sans", "sans-serif"],
+            },
+            colors: {
+              pastel: {
+                pink: "#FDE2E4",
+                "pink-dark": "#F8B4B8",
+                blue: "#E2F0CB",
+                "blue-soft": "#D0E1FD",
+                green: "#E8F5E9",
+                "green-accent": "#C8E6C9",
+                yellow: "#FFF5BA",
+                "yellow-dark": "#FFE082",
+                bg: "#FFF5F5",
+                card: "#FFFFFF",
+                text: "#2D3748",
+                muted: "#718096",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .pastel-gradient {
+        background: linear-gradient(
+          135deg,
+          #fde2e4 0%,
+          #d0e1fd 50%,
+          #e2f0cb 100%
+        );
+      }
+      .pastel-badge-pink {
+        background-color: #fde2e4;
+        color: #9c4146;
+      }
+      .pastel-badge-blue {
+        background-color: #d0e1fd;
+        color: #2b4c7e;
+      }
+      .pastel-badge-green {
+        background-color: #d1e7dd;
+        color: #0f5132;
+      }
+      .pastel-badge-yellow {
+        background-color: #fff5ba;
+        color: #856404;
+      }
+
+      /* Glassmorphism Effect */
+      .glass-card {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-pastel-bg text-pastel-text font-sans antialiased selection:bg-pastel-pink-dark selection:text-white"
+  >
+    <!-- Header & Navigation -->
+    <header
+      class="fixed top-0 left-0 right-0 z-50 glass-card transition-all duration-300"
+    >
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 sm:h-20">
+          <a
+            href="#hero"
+            class="text-xl font-bold tracking-tight text-slate-800 flex items-center gap-2"
+          >
+            <span
+              class="w-8 h-8 rounded-full bg-pastel-pink flex items-center justify-center text-xs font-black text-rose-700 shadow-sm"
+              >👩🏼‍💻</span
+            >
+            <span>Velin Alivia</span>
+          </a>
+
+          <!-- Desktop Nav -->
+          <nav class="hidden md:flex items-center space-x-1">
+            <a
+              href="#about"
+              class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-slate-900 rounded-full hover:bg-slate-100 transition-all"
+              >About</a
+            >
+            <a
+              href="#experience"
+              class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-slate-900 rounded-full hover:bg-slate-100 transition-all"
+              >Experience</a
+            >
+            <a
+              href="#projects"
+              class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-slate-900 rounded-full hover:bg-slate-100 transition-all"
+              >Projects</a
+            >
+            <a
+              href="#skills"
+              class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-slate-900 rounded-full hover:bg-slate-100 transition-all"
+              >Skills</a
+            >
+            <a
+              href="#contact"
+              class="ml-2 px-5 py-2.5 text-sm font-semibold text-slate-800 bg-pastel-pink hover:bg-pastel-pink-dark rounded-full shadow-sm hover:shadow transition-all"
+              >Contact Me</a
+            >
+          </nav>
+
+          <!-- Mobile menu button -->
+          <div class="md:hidden">
+            <button
+              id="mobile-menu-btn"
+              type="button"
+              class="p-2 rounded-lg text-slate-600 hover:bg-slate-100 focus:outline-none"
+            >
+              <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden px-4 pt-2 pb-6 space-y-2 bg-white/95 border-b border-slate-100"
+      >
+        <a
+          href="#about"
+          class="block px-4 py-2.5 text-base font-medium text-slate-600 hover:bg-slate-50 rounded-xl"
+          >About Me</a
+        >
+        <a
+          href="#experience"
+          class="block px-4 py-2.5 text-base font-medium text-slate-600 hover:bg-slate-50 rounded-xl"
+          >Experience</a
+        >
+        <a
+          href="#projects"
+          class="block px-4 py-2.5 text-base font-medium text-slate-600 hover:bg-slate-50 rounded-xl"
+          >Projects</a
+        >
+        <a
+          href="#skills"
+          class="block px-4 py-2.5 text-base font-medium text-slate-600 hover:bg-slate-50 rounded-xl"
+          >Skills</a
+        >
+        <a
+          href="#contact"
+          class="block px-4 py-2.5 text-center font-semibold text-slate-800 bg-pastel-pink hover:bg-pastel-pink-dark rounded-xl mt-4"
+          >Contact Me</a
+        >
+      </div>
+    </header>
+
+    <main class="pt-20">
+      <!-- HERO SECTION -->
+      <section
+        id="hero"
+        class="min-h-[85vh] flex items-center justify-center relative overflow-hidden py-12 lg:py-20"
+      >
+        <!-- Decorative Pastel Elements -->
+        <div
+          class="absolute top-10 left-10 w-72 h-72 bg-pastel-pink rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-blob"
+        ></div>
+        <div
+          class="absolute bottom-10 right-10 w-80 h-80 bg-pastel-blue-soft rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-blob animation-delay-2000"
+        ></div>
+        <div
+          class="absolute top-1/2 right-1/4 w-60 h-60 bg-pastel-yellow rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob animation-delay-4000"
+        ></div>
+
+        <div
+          class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full"
+        >
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <!-- Bio & Tagline -->
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+              <div
+                class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/5 text-slate-700 text-xs sm:text-sm font-medium border border-slate-200"
+              >
+                <span
+                  class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"
+                ></span>
+                Information Systems Graduate (GPA 3.91/4.00)
+              </div>
+
+              <h1
+                class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight"
+              >
+                <span
+                  class="bg-gradient-to-r from-rose-400 via-indigo-400 to-emerald-400 bg-clip-text text-transparent"
+                  >PORTOFOLIO</span
+                >
+              </h1>
+
+              <p
+                class="text-base sm:text-lg text-slate-600 max-w-2xl font-normal leading-relaxed mx-auto lg:mx-0"
+              >
+                Halo! Saya <strong>Velin Alivia Putri</strong>, lulusan Sistem Informasi 
+                Universitas Gunadarma yang berfokus pada pengembangan web dan desain UI/UX, 
+                serta antusias di bidang data. Saya membangun sistem pemesanan untuk UMKM dan 
+                sistem inventori toko kecantikan dengan Laravel, merancang antarmuka di Figma, 
+                serta mengembangkan aplikasi Android berbasis Flutter dengan deep learning (YOLOv12). 
+                Saya juga berpengalaman mengelola data dan mendukung penyelenggaraan acara 
+                selama magang di Telkomsel dan Kementerian Koordinator.
+              </p>
+
+              <!-- CTA Buttons -->
+              <div
+                class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2"
+              >
+                <a
+                  href="#projects"
+                  class="px-7 py-3.5 rounded-full bg-slate-900 text-white font-semibold text-sm hover:bg-slate-800 transition-all shadow-md hover:shadow-lg flex items-center gap-2"
+                >
+                  View My Work <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+                <a
+                  href="#contact"
+                  class="px-7 py-3.5 rounded-full bg-white text-slate-800 border border-slate-200 font-semibold text-sm hover:bg-slate-50 transition-all shadow-sm"
+                >
+                  Let's Connect
+                </a>
+              </div>
+
+              <!-- Social Links -->
+              <div
+                class="flex items-center justify-center lg:justify-start gap-5 pt-4 text-slate-500"
+              >
+                <a
+                  href="mailto:velinalivia04@gmail.com"
+                  class="hover:text-rose-500 transition-colors"
+                  title="Email"
+                  ><i class="fa-regular fa-envelope text-xl"></i
+                ></a>
+                <a
+                  href="https://linkedin.com/in/velinaliviaputri"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="hover:text-blue-600 transition-colors"
+                  title="LinkedIn"
+                  ><i class="fa-brands fa-linkedin text-xl"></i
+                ></a>
+                <a
+                  href="https://wa.me/+6282311808615"
+                  class="hover:text-emerald-600 transition-colors"
+                  title="Phone"
+                  ><i class="fa-solid fa-phone text-xl"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- Profile Avatar Card -->
+            <div class="lg:col-span-5 flex justify-center">
+              <div class="relative w-64 sm:w-80 h-64 sm:h-80">
+                <div
+                  class="absolute inset-0 rounded-3xl bg-gradient-to-tr from-pastel-pink via-pastel-blue-soft to-pastel-yellow rotate-6 transform transition-transform group-hover:rotate-12"
+                ></div>
+                <div
+                  class="absolute inset-0 rounded-3xl bg-white shadow-xl overflow-hidden border-4 border-white flex flex-col items-center justify-center p-6 text-center"
+                >
+                  <div
+                    class="w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-slate-100 mb-4 overflow-hidden border-4 border-pastel-pink flex items-center justify-center shadow-inner"
+                  >
+                    <img
+                      src="images/foto-velin.jpg"
+                      alt="Foto profil Velin Alivia Putri"
+                      class="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <h3 class="font-bold text-lg text-slate-800">
+                    Velin Alivia Putri
+                  </h3>
+                  <p class="text-xs text-slate-500">Universitas Gunadarma</p>
+                  <span
+                    class="mt-3 px-3 py-1 bg-pastel-green rounded-full text-xs font-semibold text-emerald-800"
+                    >Web &amp; Data Enthusiast</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT ME SECTION -->
+      <section id="about" class="py-20 bg-white border-y border-slate-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <span
+              class="px-3 py-1 rounded-full bg-pastel-pink text-xs font-bold tracking-wider text-rose-800 uppercase"
+              >About Me</span
+            >
+            <h2 class="text-3xl font-bold text-slate-900 mt-3">
+              Information Systems Graduate<br />
+              Web Developer & Data Enthusiast
+            </h2>
+            <div
+              class="w-16 h-1 bg-pastel-pink-dark mx-auto mt-4 rounded-full"
+            ></div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Stat / Key Highlights -->
+            <div
+              class="bg-pastel-bg p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow"
+            >
+              <div>
+                <div
+                  class="w-12 h-12 rounded-xl bg-pastel-pink flex items-center justify-center mb-4 text-rose-700"
+                >
+                  <i class="fa-solid fa-graduation-cap text-xl"></i>
+                </div>
+                <h3 class="font-bold text-lg text-slate-800 mb-2">
+                  Pendidikan & Akademik
+                </h3>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                  Lulusan S1 Sistem Informasi Universitas Gunadarma dengan IPK
+                  <strong>3,91 / 4,00</strong>. Berfokus pada analisis sistem,
+                  visualisasi data, dan perancangan perangkat lunak.
+                </p>
+              </div>
+              <div
+                class="mt-4 pt-4 border-t border-slate-200/60 text-xs font-semibold text-slate-500"
+              >
+                Sep 2022 - Agu 2026
+              </div>
+            </div>
+
+            <div
+              class="bg-pastel-bg p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow"
+            >
+              <div>
+                <div
+                  class="w-12 h-12 rounded-xl bg-pastel-blue-soft flex items-center justify-center mb-4 text-blue-700"
+                >
+                  <i class="fa-solid fa-code text-xl"></i>
+                </div>
+                <h3 class="font-bold text-lg text-slate-800 mb-2">
+                  Pengembangan Teknologi
+                </h3>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                  Berpengalaman membangun sistem pemesanan berbasis web,
+                  merancang antarmuka UI/UX di Figma, serta mengembangkan
+                  aplikasi Android dengan Flutter yang memanfaatkan model deep
+                  learning (YOLOv12).
+                </p>
+              </div>
+              <div
+                class="mt-4 pt-4 border-t border-slate-200/60 text-xs font-semibold text-slate-500"
+              >
+                Web Developer & Mobile Integration
+              </div>
+            </div>
+
+            <div
+              class="bg-pastel-bg p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow"
+            >
+              <div>
+                <div
+                  class="w-12 h-12 rounded-xl bg-pastel-yellow flex items-center justify-center mb-4 text-amber-700"
+                >
+                  <i class="fa-solid fa-chart-pie text-xl"></i>
+                </div>
+                <h3 class="font-bold text-lg text-slate-800 mb-2">
+                  Manajemen Data & Acara
+                </h3>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                  Magang di Telkomsel & Kementerian Koordinator. Mengelola dan
+                  menstandarisasikan data 1.000+ peserta magang, mencatat
+                  notulensi rapat koordinasi dengan pengelola 36 bandara
+                  internasional di seluruh Indonesia, serta mendukung
+                  pelaksanaan acara nasional.
+                </p>
+              </div>
+              <div
+                class="mt-4 pt-4 border-t border-slate-200/60 text-xs font-semibold text-slate-500"
+              >
+                Data Analysis & Coordination
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE SECTION WITH DOCUMENTATION -->
+      <section id="experience" class="py-20 bg-pastel-bg">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <span
+              class="px-3 py-1 rounded-full bg-pastel-blue-soft text-xs font-bold tracking-wider text-blue-900 uppercase"
+              >Hands-On Experience</span
+            >
+            <h2 class="text-3xl font-bold text-slate-900 mt-3">
+              Pengalaman Magang & Dokumentasi
+            </h2>
+            <div
+              class="w-16 h-1 bg-pastel-blue-soft mx-auto mt-4 rounded-full"
+            ></div>
+          </div>
+
+          <div class="space-y-8 max-w-4xl mx-auto">
+            <!-- Experience Item 1 -->
+            <div
+              class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-100 shadow-sm relative overflow-hidden transition-all hover:shadow-md"
+            >
+              <div class="absolute top-0 left-0 w-2 h-full bg-sky-400"></div>
+              <div
+                class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4"
+              >
+                <div>
+                  <h3 class="text-xl font-bold text-slate-900">
+                    Magang di Deputi Bidang Koordinasi Konektivitas
+                  </h3>
+                  <p class="text-sm font-semibold text-sky-700">
+                    Kementerian Koordinator Bidang Infrastruktur dan Pembangunan
+                    Kewilayahan
+                  </p>
+                </div>
+                <span
+                  class="px-3 py-1 rounded-full bg-slate-100 text-xs font-semibold text-slate-600 self-start md:self-center"
+                >
+                  Sep 2025 - Des 2025
+                </span>
+              </div>
+              <ul
+                class="space-y-2 text-sm text-slate-600 list-disc list-inside leading-relaxed"
+              >
+                <li>
+                  Mengikuti dan mendokumentasikan rapat koordinasi harian bersama
+                  kementerian/lembaga dan pengelola 36 bandara internasional di
+                  Indonesia, termasuk menyusun notulensi serta mendata informasi penting seperti kelengkapan fasilitas
+                  dan lalu lintas (traffic) bandara.
+                </li>
+                <li>
+                    Menghimpun dan merapikan data bandara untuk mendukung persiapan peluncuran aplikasi 
+                    "All Indonesia" yang ditetapkan di seluruh bandara internasional.
+                </li>
+                <li>
+                  Mendukung pelaksana acara peluncuran aplikasi "All Indonesia" di Bandara Soekarno-Hatta.
+                </li>
+                <li>
+                  Membantu penyelenggaraan acara peresmian jalur logistik kereta api
+                  barang & kapal RO-RO di Cilegon (menyusun rundown, pendataan kehadiran tamu, dan
+                  membantu kelancaran di lapangan).
+                </li>
+              </ul>
+
+              <!-- Dokumentasi Magang 1 -->
+              <div class="mt-6 pt-6 border-t border-slate-100">
+                <h4
+                  class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3 flex items-center gap-1.5"
+                >
+                  <i class="fa-regular fa-images text-sky-500"></i> Dokumentasi
+                  Kegiatan Magang
+                </h4>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                  <div
+                    class="relative group rounded-xl overflow-hidden h-28 bg-slate-100 border border-slate-200 cursor-pointer shadow-xs"
+                    onclick="
+                      openLightbox(
+                        'images/magang1.png',
+                        'Tiga bulan belajar langsung dari rapat koordinasi lintas instansi, mengolah data bandara, dan membantu dua acara nasional merupakan momen yang paling berkesan 🙌🏽',
+                      )
+                    "
+                  >
+                    <img
+                      src="images/magang1.png"
+                      alt="Dokumentasi Kegiatan Magang"
+                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      onerror="
+                        this.src =
+                          'https://placehold.co/400x300/E2F0CB/2D3748?text=Dokumentasi'
+                      "
+                    />
+                    <div
+                      class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-medium px-2 text-center"
+                    >
+                      Dokumentasi
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="mt-6 pt-4 border-t border-slate-200/60 flex flex-wrap gap-2"
+              >
+                <span
+                  class="px-2.5 py-1 rounded-md bg-slate-200 text-slate-700 text-xs font-medium"
+                  >Pengolahan Data</span
+                >
+                <span
+                  class="px-2.5 py-1 rounded-md bg-slate-200 text-slate-700 text-xs font-medium"
+                  >Notulensi</span
+                >
+                <span
+                  class="px-2.5 py-1 rounded-md bg-slate-200 text-slate-700 text-xs font-medium"
+                  >Koordinasi Lintas Instansi</span
+                >
+                <span
+                  class="px-2.5 py-1 rounded-md bg-slate-200 text-slate-700 text-xs font-medium"
+                  >Event Support</span
+                >
+              </div>
+            </div>
+            
+
+            <!-- Experience Item 2 -->
+            <div
+              class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-100 shadow-sm relative overflow-hidden transition-all hover:shadow-md"
+            >
+              <div class="absolute top-0 left-0 w-2 h-full bg-rose-400"></div>
+              <div
+                class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4"
+              >
+                <div>
+                  <h3 class="text-xl font-bold text-slate-900">
+                    Magang di Outsourcing & Internship Governance and Compliance
+                  </h3>
+                  <p class="text-sm font-semibold text-rose-600">
+                    Telkomsel (Human Capital Management)
+                  </p>
+                </div>
+                <span
+                  class="px-3 py-1 rounded-full bg-slate-100 text-xs font-semibold text-slate-600 self-start md:self-center"
+                >
+                  Feb 2025 - Mar 2025
+                </span>
+              </div>
+              <ul
+                class="space-y-2 text-sm text-slate-600 list-disc list-inside leading-relaxed"
+              >
+                <li>
+                  Mengelola, menganalisis, dan menstandarisasikan 1.000+ data
+                  peserta program magang untuk menjaga integritas data dan konsistensi format, serta melaporkan
+                  hasilnya secara langsung kepada Mentor dan General Manager.
+                </li>
+                <li>
+                  Melakukan benchmarking program magang dari perusahaan lain dengan
+                  mengumpulkan data riset secara mandiri sebagai acuan
+                  peningkatan kualitas program.
+                </li>
+                <li>
+                  Terlibat dalam perencanaan dan pelaksaan acara Telkomsel
+                  Apprenticeship Graduation 2025 seperti mendesain poster acara dan virtual background, 
+                  membuat fun quiz game untuk sesi acara, dan menyiapkan absensi peserta menggunakan Google Forms
+                </li>
+              </ul>
+
+              <!-- Dokumentasi Magang 2 -->
+              <div class="mt-6 pt-6 border-t border-slate-100">
+                <h4
+                  class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3 flex items-center gap-1.5"
+                >
+                  <i class="fa-regular fa-images text-rose-500"></i> Dokumentasi
+                  Kegiatan Magang
+                </h4>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                  <div
+                    class="relative group rounded-xl overflow-hidden h-28 bg-slate-100 border border-slate-200 cursor-pointer shadow-xs"
+                    onclick="
+                      openLightbox(
+                        'images/proyek2.png',
+                        'Hasil kerja selama magang di Telkomsel: proyek benchmark program magang perusahaan lain, poster dan virtual background Telkomsel Apprenticeship Graduation 2025, serta pengolahan data peserta magang beserta dashboard-nya.',
+                      )
+                    "
+                  >
+                    <img
+                      src="images/proyek2.png"
+                      alt="Dokumentasi Kegiatan Magang"
+                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      onerror="
+                        this.src =
+                          'https://placehold.co/400x300/FDE2E4/2D3748?text=Dokumentasi'
+                      "
+                    />
+                    <div
+                      class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-medium px-2 text-center"
+                    >
+                      Dokumentasi Proyek
+                    </div>
+                  </div>
+                  <div
+                    class="relative group rounded-xl overflow-hidden h-28 bg-slate-100 border border-slate-200 cursor-pointer shadow-xs"
+                    onclick="
+                      openLightbox(
+                        'images/magang2.png',
+                        'Bersama teman-teman magang selama di Telkomsel 🧡',
+                      )
+                    "
+                  >
+                    <img
+                      src="images/magang2.png"
+                      alt="Dokumentasi Kegiatan Magang"
+                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      onerror="
+                        this.src =
+                          'https://placehold.co/400x300/FFF5BA/2D3748?text=Dokumentasi'
+                      "
+                    />
+                    <div
+                      class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-medium px-2 text-center"
+                    >
+                      Dokumentasi Kegiatan
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                <div
+                class="mt-6 pt-4 border-t border-slate-200/60 flex flex-wrap gap-2"
+              >
+                <span
+                  class="px-2.5 py-1 rounded-md bg-slate-200 text-slate-700 text-xs font-medium"
+                  >Analisis Data</span
+                >
+                <span
+                  class="px-2.5 py-1 rounded-md bg-slate-200 text-slate-700 text-xs font-medium"
+                  >Standarisasi Data</span
+                >
+                <span
+                  class="px-2.5 py-1 rounded-md bg-slate-200 text-slate-700 text-xs font-medium"
+                  >Benchmarking</span
+                >
+                <span
+                  class="px-2.5 py-1 rounded-md bg-slate-200 text-slate-700 text-xs font-medium"
+                  >Event Support</span
+                >
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE & PROJECTS GRID SECTION WITH DOKUMENTASI -->
+      <section id="projects" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <span
+              class="px-3 py-1 rounded-full bg-pastel-green text-xs font-bold tracking-wider text-emerald-800 uppercase"
+              >Portofolio</span
+            >
+            <h2 class="text-3xl font-bold text-slate-900 mt-3">
+              Proyek & Portfolio
+            </h2>
+            <p class="text-slate-500 text-sm mt-2">
+              Kombinasi skripsi, penelitian ilmiah, proyek, dan kegiatan
+              organisasi
+            </p>
+            <div
+              class="w-16 h-1 bg-pastel-green-accent mx-auto mt-4 rounded-full"
+            ></div>
+          </div>
+
+          <!-- Projects Grid Card -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Card 1: Skripsi Deep Learning -->
+            <div
+              class="bg-pastel-bg rounded-3xl p-6 sm:p-8 border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+            >
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <span
+                    class="px-3 py-1 rounded-full text-xs font-bold pastel-badge-pink"
+                    >Skripsi</span
+                  >
+                  <span class="text-xs text-slate-400 font-medium"
+                    >Apr 2026 - Agu 2026</span
+                  >
+                </div>
+                <h3
+                  class="text-xl font-bold text-slate-900 group-hover:text-rose-600 transition-colors"
+                >
+                  Implementasi Deep Learning YOLO untuk Deteksi Kematangan
+                  Pepaya Berbasis Android
+                </h3>
+                <p class="text-sm text-slate-600 mt-3 leading-relaxed">
+                  Membangun sistem deteksi objek untuk mengklasifikasikan
+                  tingkat kematangan pepaya menggunakan YOLOv12-N yang
+                  diintegrasikan ke dalam aplikasi Android berbasis Flutter.
+                </p>
+
+                <div
+                  class="mt-4 p-4 bg-white/80 rounded-2xl border border-slate-100 text-xs space-y-1.5 text-slate-700"
+                >
+                  <div>
+                    <strong class="text-slate-900">• Dataset:</strong> 3.000+
+                    data dikumpulkan & diaugmentasi hingga ~7.900 gambar.
+                  </div>
+                  <div>
+                    <strong class="text-slate-900">• Performa:</strong> Evaluasi
+                    model mAP@0.5 mencapai 86,2%.
+                  </div>
+                  <div>
+                    <strong class="text-slate-900">• Testing:</strong> Black Box
+                    Testing mencapai tingkat keberhasilan 91,4%.
+                  </div>
+                </div>
+
+                <!-- Preview Dokumentasi Proyek 1 -->
+                <div class="mt-4 pt-4 border-t border-slate-200/60">
+                  <p
+                    class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2"
+                  >
+                    Dokumentasi Proyek
+                  </p>
+                  <div class="grid grid-cols-2 gap-2">
+                    <div
+                      class="relative group/img h-24 rounded-xl overflow-hidden border border-slate-200 bg-white cursor-pointer"
+                      onclick="
+                        openLightbox(
+                          'images/skripsi.png',
+                          'Tampilan Aplikasi Mobile, membuat Buku Panduan hingga Poster Ilmiah',
+                        )
+                      "
+                    >
+                      <img
+                        src="images/skripsi.png"
+                        alt="Tampilan Aplikasi Android"
+                        class="w-full h-full object-cover group-hover/img:scale-105 transition-transform"
+                        onerror="
+                          this.src =
+                            'https://placehold.co/400x300/FDE2E4/2D3748?text=Dokumentasi'
+                        "
+                      />
+                      <span
+                        class="absolute bottom-1 left-1 px-1.5 py-0.5 bg-black/60 text-white text-[10px] rounded"
+                        >Tampilan Aplikasi Deteksi</span
+                      >
+                    </div>
+                    <div
+                      class="relative group/img h-24 rounded-xl overflow-hidden border border-slate-200 bg-white cursor-pointer"
+                      onclick="
+                        openLightbox(
+                          'images/grafik.png',
+                          'Hasil setelah dilakukannya Training dan Evaluation Model YOLO',
+                        )
+                      "
+                    >
+                      <img
+                        src="images/grafik.png"
+                        alt="Hasil Model YOLO"
+                        class="w-full h-full object-cover group-hover/img:scale-105 transition-transform"
+                        onerror="
+                          this.src =
+                            'https://placehold.co/400x300/E8F5E9/2D3748?text=Dokumentasi'
+                        "
+                      />
+                      <span
+                        class="absolute bottom-1 left-1 px-1.5 py-0.5 bg-black/60 text-white text-[10px] rounded"
+                        >Grafik Hasil Model </span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="mt-6 pt-4 border-t border-slate-200/60 flex flex-wrap gap-2"
+              >
+                <span
+                  class="px-2.5 py-1 rounded-md bg-slate-200 text-slate-700 text-xs font-medium"
+                  >YOLOv12</span
+                >
+                <span
+                  class="px-2.5 py-1 rounded-md bg-slate-200 text-slate-700 text-xs font-medium"
+                  >Flutter/Dart</span
+                >
+                <span
+                  class="px-2.5 py-1 rounded-md bg-slate-200 text-slate-700 text-xs font-medium"
+                  >TFLite</span
+                >
+                <span
+                  class="px-2.5 py-1 rounded-md bg-slate-200 text-slate-700 text-xs font-medium"
+                  >Google Colab</span
+                >
+              </div>
+            </div>
+
+            <!-- Card 2: Penulisan Ilmiah -->
+            <div
+              class="bg-pastel-bg rounded-3xl p-6 sm:p-8 border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+            >
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <span
+                    class="px-3 py-1 rounded-full text-xs font-bold pastel-badge-blue"
+                    >Penulisan Ilmiah</span
+                  >
+                  <span class="text-xs text-slate-400 font-medium"
+                    >Jun 2025 - Agu 2025</span
+                  >
+                </div>
+                <h3
+                  class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors"
+                >
+                  Rancang Bangun Aplikasi Pemesanan Berbasis Website
+                </h3>
+                <p class="text-sm text-slate-600 mt-3 leading-relaxed">
+                  Pengembangan sistem aplikasi pemesanan berbasis website guna
+                  mendigitalisasi dan mengoptimalkan operasional harian usaha
+                  secara efektif.
+                </p>
+
+                <div
+                  class="mt-4 p-4 bg-white/80 rounded-2xl border border-slate-100 text-xs space-y-1.5 text-slate-700"
+                >
+                  <div>
+                    <strong class="text-slate-900">• Analisis:</strong>
+                    Melakukan analisis kebutuhan pengguna untuk spesifikasi
+                    fungsional sistem.
+                  </div>
+                  <div>
+                    <strong class="text-slate-900">• Wireframing:</strong>
+                    Merancang arsitektur sistem dan alur antarmuka di Figma.
+                  </div>
+                  <div>
+                    <strong class="text-slate-900">• Maintenance:</strong>
+                    Mengembangkan serta memelihara sistem pemesanan.
+                  </div>
+                </div>
+
+                <!-- Preview Dokumentasi Proyek 2 -->
+                <div class="mt-4 pt-4 border-t border-slate-200/60">
+                  <p
+                    class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2"
+                  >
+                    Dokumentasi Proyek
+                  </p>
+                  <div class="grid grid-cols-2 gap-2">
+                    <div
+                      class="relative group/img h-24 rounded-xl overflow-hidden border border-slate-200 bg-white cursor-pointer"
+                      onclick="
+                        openLightbox(
+                          'images/PI.png',
+                          'Tampilan Aplikasi Website Pemesanan',
+                        )
+                      "
+                    >
+                      <img
+                        src="images/PI.png"
+                        alt="Website Interface"
+                        class="w-full h-full object-cover group-hover/img:scale-105 transition-transform"
+                        onerror="
+                          this.src =
+                            'https://placehold.co/400x300/D0E1FD/2D3748?text=Dokumentasi'
+                        "
+                      />
+                      <span
+                        class="absolute bottom-1 left-1 px-1.5 py-0.5 bg-black/60 text-white text-[10px] rounded"
+                        >Tampilan Web</span
+                      >
+                    </div>
+                    <div
+                      class="relative group/img h-24 rounded-xl overflow-hidden border border-slate-200 bg-white cursor-pointer"
+                      onclick="
+                        openLightbox(
+                          'images/rancang.png',
+                          'Perancangan Interface di Figma, Database, Use Case Diagram, dan Struktur Navigasi',
+                        )
+                      "
+                    >
+                      <img
+                        src="images/rancang.png"
+                        alt="Figma Prototype"
+                        class="w-full h-full object-cover group-hover/img:scale-105 transition-transform"
+                        onerror="
+                          this.src =
+                            'https://placehold.co/400x300/FFF5BA/2D3748?text=Dokumentasi'
+                        "
+                      />
+                      <span
+                        class="absolute bottom-1 left-1 px-1.5 py-0.5 bg-black/60 text-white text-[10px] rounded"
+                        >Rancangan</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="mt-6 pt-4 border-t border-slate-200/60 flex flex-wrap gap-2"
+              >
+                <span
+                  class="px-2.5 py-1 rounded-md bg-slate-200 text-slate-700 text-xs font-medium"
+                  >HTML/CSS</span
+                >
+                <span
+                  class="px-2.5 py-1 rounded-md bg-slate-200 text-slate-700 text-xs font-medium"
+                  >JavaScript</span
+                >
+                <span
+                  class="px-2.5 py-1 rounded-md bg-slate-200 text-slate-700 text-xs font-medium"
+                  >UI/UX Figma</span
+                >
+                <span
+                  class="px-2.5 py-1 rounded-md bg-slate-200 text-slate-700 text-xs font-medium"
+                  >System Design</span
+                >
+              </div>
+            </div>
+
+            <!-- Card 3: Web Proyek Mandiri -->
+            <div
+              class="bg-pastel-bg rounded-3xl p-6 sm:p-8 border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+            >
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <span
+                    class="px-3 py-1 rounded-full text-xs font-bold pastel-badge-yellow"
+                    >Proyek Mandiri</span
+                  >
+                  <span class="text-xs text-slate-400 font-medium"
+                    >Web Dev (Laravel)</span
+                  >
+                </div>
+                <h3
+                  class="text-xl font-bold text-slate-900 group-hover:text-amber-600 transition-colors"
+                >
+                  Beauty Store Inventory System
+                </h3>
+                <p class="text-sm text-slate-600 mt-3 leading-relaxed">
+                  Sistem inventori berbasis web untuk toko kecantikan yang membantu pencatatan stok secara rapi dan terstruktur. 
+                  Dilengkapi dashboard ringkasan, pencatatan barang masuk dan keluar, serta laporan untuk 
+                  memudahkan pemantauan persediaan. Dibangun menggunakan Laravel.
+                </p>
+
+                <!-- Preview Dokumentasi Proyek 3 -->
+                <div class="mt-4 pt-4 border-t border-slate-200/60">
+                  <p
+                    class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2"
+                  >
+                    Dokumentasi Proyek
+                  </p>
+                  <div class="grid grid-cols-2 gap-2">
+                    <div
+                      class="relative group/img h-24 rounded-xl overflow-hidden border border-slate-200 bg-white cursor-pointer"
+                      onclick="
+                        openLightbox(
+                          'images/rancang2.png',
+                          'Perancangan Interface di Figma',
+                        )
+                      "
+                    >
+                      <img
+                        src="images/rancang2.png"
+                        alt="Figma Prototype"
+                        class="w-full h-full object-cover group-hover/img:scale-105 transition-transform"
+                        onerror="
+                          this.src =
+                            'https://placehold.co/400x300/FFF5BA/2D3748?text=Dokumentasi'
+                        "
+                      />
+                      <span
+                        class="absolute bottom-1 left-1 px-1.5 py-0.5 bg-black/60 text-white text-[10px] rounded"
+                        >Rancangan</span
+                      >
+                    </div>
+                    <div
+                      class="relative group/img h-24 rounded-xl overflow-hidden border border-slate-200 bg-white cursor-pointer"
+                      onclick="
+                        openLightbox(
+                          'images/proyek4.png',
+                          'Tampilan Web Beauty Store Inventory',
+                        )
+                      "
+                    >
+                      <img
+                        src="images/proyek4.png"
+                        alt="Tampilan Web Beauty Store Inventory"
+                        class="w-full h-full object-cover group-hover/img:scale-105 transition-transform"
+                        onerror="
+                          this.src =
+                            'https://placehold.co/400x300/FFF5BA/2D3748?text=Dokumentasi'
+                        "
+                      />
+                      <span
+                        class="absolute bottom-1 left-1 px-1.5 py-0.5 bg-black/60 text-white text-[10px] rounded"
+                        >Tampilan Interface</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="mt-6 pt-4 border-t border-slate-200/60 flex flex-wrap gap-2"
+              >
+                <span
+                  class="px-2.5 py-1 rounded-md bg-slate-200 text-slate-700 text-xs font-medium"
+                  >Laravel</span
+                >
+                <span
+                  class="px-2.5 py-1 rounded-md bg-slate-200 text-slate-700 text-xs font-medium"
+                  >PHP</span
+                >
+                <span
+                  class="px-2.5 py-1 rounded-md bg-slate-200 text-slate-700 text-xs font-medium"
+                  >Dashboard</span
+                >
+                <span
+                  class="px-2.5 py-1 rounded-md bg-slate-200 text-slate-700 text-xs font-medium"
+                  >Laporan Stok</span
+                >
+              </div>
+            </div>
+
+            <!-- Card 4: Sinop Web Proyek Kelompok -->
+            <div
+              class="bg-pastel-bg rounded-3xl p-6 sm:p-8 border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+            >
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <span
+                    class="px-3 py-1 rounded-full text-xs font-bold pastel-badge-yellow"
+                    >Proyek Kelompok</span
+                  >
+                  <span class="text-xs text-slate-400 font-medium"
+                    >UI/UX & Web Dev</span
+                  >
+                </div>
+                <h3
+                  class="text-xl font-bold text-slate-900 group-hover:text-amber-600 transition-colors"
+                >
+                  SinopWeb App Interface
+                </h3>
+                <p class="text-sm text-slate-600 mt-3 leading-relaxed">
+                  Website interaktif tentang sinopsis film yang dikerjakan dalam tim. Saya berperan merancang antarmuka 
+                  di Figma dan membangun tampilan front-end dengan HTML dan CSS, 
+                  dengan fokus pada pengalaman pengguna yang nyaman dan tampilan yang responsif di berbagai perangkat.
+                </p>
+
+                <!-- Preview Dokumentasi Proyek 4 -->
+                <div class="mt-4 pt-4 border-t border-slate-200/60">
+                  <p
+                    class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2"
+                  >
+                    Dokumentasi Proyek
+                  </p>
+                  <div class="grid grid-cols-2 gap-2">
+                    <div
+                      class="relative group/img h-24 rounded-xl overflow-hidden border border-slate-200 bg-white cursor-pointer"
+                      onclick="
+                        openLightbox(
+                          'images/proyek3.png',
+                          'Desain UI Sinop Web',
+                        )
+                      "
+                    >
+                      <img
+                        src="images/proyek3.png"
+                        alt="Desain Sinop Web"
+                        class="w-full h-full object-cover group-hover/img:scale-105 transition-transform"
+                        onerror="
+                          this.src =
+                            'https://placehold.co/400x300/FFF5BA/2D3748?text=Dokumentasi'
+                        "
+                      />
+                      <span
+                        class="absolute bottom-1 left-1 px-1.5 py-0.5 bg-black/60 text-white text-[10px] rounded"
+                        >UI Layout</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="mt-6 pt-4 border-t border-slate-200/60 flex flex-wrap gap-2"
+              >
+                <span
+                  class="px-2.5 py-1 rounded-md bg-slate-200 text-slate-700 text-xs font-medium"
+                  >Figma UI/UX</span
+                >
+                <span
+                  class="px-2.5 py-1 rounded-md bg-slate-200 text-slate-700 text-xs font-medium"
+                  >HTML5</span
+                >
+                <span
+                  class="px-2.5 py-1 rounded-md bg-slate-200 text-slate-700 text-xs font-medium"
+                  >CSS Responsive</span
+                >
+              </div>
+            </div>
+
+            <!-- Card 5: FIKTI SPACE 3.0 Organisasi -->
+            <div
+              class="bg-pastel-bg rounded-3xl p-6 sm:p-8 border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+            >
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <span
+                    class="px-3 py-1 rounded-full text-xs font-bold pastel-badge-green"
+                    >Organisasi (BEM)</span
+                  >
+                  <span class="text-xs text-slate-400 font-medium"
+                    >Apr 2024 - Jun 2024</span
+                  >
+                </div>
+                <h3
+                  class="text-xl font-bold text-slate-900 group-hover:text-emerald-600 transition-colors"
+                >
+                  FIKTI SPACE 3.0 - Management E-Sports
+                </h3>
+                <p class="text-sm text-slate-600 mt-3 leading-relaxed">
+                  Bertindak sebagai Staf Divisi Acara yang memimpin manajemen
+                  teknis kompetisi e-sports antar jurusan yang melibatkan 14 tim
+                  secara menyeluruh.
+                </p>
+
+                <!-- Preview Dokumentasi Proyek 5 -->
+                <div class="mt-4 pt-4 border-t border-slate-200/60">
+                  <p
+                    class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2"
+                  >
+                    Dokumentasi Kegiatan
+                  </p>
+                  <div class="grid grid-cols-2 gap-2">
+                    <div
+                      class="relative group/img h-24 rounded-xl overflow-hidden border border-slate-200 bg-white cursor-pointer"
+                      onclick="
+                        openLightbox(
+                          'images/fikti.png',
+                          'Bersama seluruh panitia acara FIKTI Space',
+                        )
+                      "
+                    >
+                      <img
+                        src="images/fikti.png"
+                        alt="Panitia Acara"
+                        class="w-full h-full object-cover group-hover/img:scale-105 transition-transform"
+                        onerror="
+                          this.src =
+                            'https://placehold.co/400x300/FDE2E4/2D3748?text=Dokumentasi'
+                        "
+                      />
+                      <span
+                        class="absolute bottom-1 left-1 px-1.5 py-0.5 bg-black/60 text-white text-[10px] rounded"
+                        >Dokumentasi Kegiatan Acara</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="mt-6 pt-4 border-t border-slate-200/60 flex flex-wrap gap-2"
+              >
+                <span
+                  class="px-2.5 py-1 rounded-md bg-slate-200 text-slate-700 text-xs font-medium"
+                  >Event Coordination</span
+                >
+                <span
+                  class="px-2.5 py-1 rounded-md bg-slate-200 text-slate-700 text-xs font-medium"
+                  >Tournament Bracket</span
+                >
+                <span
+                  class="px-2.5 py-1 rounded-md bg-slate-200 text-slate-700 text-xs font-medium"
+                  >Team Leadership</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MY SKILLS SECTION -->
+      <section id="skills" class="py-20 bg-pastel-bg">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <span
+              class="px-3 py-1 rounded-full bg-pastel-yellow text-xs font-bold tracking-wider text-amber-900 uppercase"
+              >Abilities</span
+            >
+            <h2 class="text-3xl font-bold text-slate-900 mt-3">
+              Keterampilan & Sertifikasi
+            </h2>
+            <div
+              class="w-16 h-1 bg-pastel-yellow-dark mx-auto mt-4 rounded-full"
+            ></div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Hard Skills Badges -->
+            <div
+              class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-100 shadow-sm"
+            >
+              <div class="flex items-center gap-3 mb-6">
+                <div
+                  class="w-10 h-10 rounded-xl bg-pastel-pink flex items-center justify-center text-rose-700"
+                >
+                  <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <h3 class="text-lg font-bold text-slate-800">
+                  Hard Skills & Technical
+                </h3>
+              </div>
+
+              <div class="flex flex-wrap gap-2.5">
+                <span
+                  class="px-3 py-1.5 rounded-xl bg-slate-100 text-slate-800 text-sm font-semibold hover:bg-pastel-pink transition-colors"
+                  >HTML</span
+                >
+                <span
+                  class="px-3 py-1.5 rounded-xl bg-slate-100 text-slate-800 text-sm font-semibold hover:bg-pastel-pink transition-colors"
+                  >CSS</span
+                >
+                <span
+                  class="px-3 py-1.5 rounded-xl bg-slate-100 text-slate-800 text-sm font-semibold hover:bg-pastel-pink transition-colors"
+                  >JavaScript</span
+                >
+                <span
+                  class="px-3 py-1.5 rounded-xl bg-slate-100 text-slate-800 text-sm font-semibold hover:bg-pastel-pink transition-colors"
+                  >PHP</span
+                >
+                <span
+                  class="px-3 py-1.5 rounded-xl bg-slate-100 text-slate-800 text-sm font-semibold hover:bg-pastel-pink transition-colors"
+                  >Laravel</span
+                >
+                <span
+                  class="px-3 py-1.5 rounded-xl bg-slate-100 text-slate-800 text-sm font-semibold hover:bg-pastel-blue-soft transition-colors"
+                  >Figma (Wireframe/Prototype)</span
+                >
+                <span
+                  class="px-3 py-1.5 rounded-xl bg-slate-100 text-slate-800 text-sm font-semibold hover:bg-pastel-blue-soft transition-colors"
+                  >SQL</span
+                >
+                <span
+                  class="px-3 py-1.5 rounded-xl bg-slate-100 text-slate-800 text-sm font-semibold hover:bg-pastel-green transition-colors"
+                  >Flutter & Dart</span
+                >
+                <span
+                  class="px-3 py-1.5 rounded-xl bg-slate-100 text-slate-800 text-sm font-semibold hover:bg-pastel-green transition-colors"
+                  >Python</span
+                >
+                <span
+                  class="px-3 py-1.5 rounded-xl bg-slate-100 text-slate-800 text-sm font-semibold hover:bg-pastel-yellow transition-colors"
+                  >Power BI</span
+                >
+                <span
+                  class="px-3 py-1.5 rounded-xl bg-slate-100 text-slate-800 text-sm font-semibold hover:bg-pastel-yellow transition-colors"
+                  >Google Colab</span
+                >
+                <span
+                  class="px-3 py-1.5 rounded-xl bg-slate-100 text-slate-800 text-sm font-semibold hover:bg-slate-200 transition-colors"
+                  >C#</span
+                >
+                <span
+                  class="px-3 py-1.5 rounded-xl bg-slate-100 text-slate-800 text-sm font-semibold hover:bg-slate-200 transition-colors"
+                  >Go</span
+                >
+                <span
+                  class="px-3 py-1.5 rounded-xl bg-slate-100 text-slate-800 text-sm font-semibold hover:bg-slate-200 transition-colors"
+                  >Black Box Testing</span
+                >
+                <span
+                  class="px-3 py-1.5 rounded-xl bg-slate-100 text-slate-800 text-sm font-semibold hover:bg-slate-200 transition-colors"
+                  >SDLC</span
+                >
+                <span
+                  class="px-3 py-1.5 rounded-xl bg-slate-100 text-slate-800 text-sm font-semibold hover:bg-slate-200 transition-colors"
+                  >Google Workspace</span
+                >
+                <span
+                  class="px-3 py-1.5 rounded-xl bg-slate-100 text-slate-800 text-sm font-semibold hover:bg-slate-200 transition-colors"
+                  >Microsoft Office</span
+                >
+              </div>
+            </div>
+
+            <!-- Soft Skills & Sertifikasi -->
+            <div class="space-y-6">
+              <div
+                class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-100 shadow-sm"
+              >
+                <div class="flex items-center gap-3 mb-6">
+                  <div
+                    class="w-10 h-10 rounded-xl bg-pastel-blue-soft flex items-center justify-center text-blue-700"
+                  >
+                    <i class="fa-solid fa-users"></i>
+                  </div>
+                  <h3 class="text-lg font-bold text-slate-800">Soft Skills</h3>
+                </div>
+
+                <div class="flex flex-wrap gap-2.5">
+                  <span
+                    class="px-3 py-1.5 rounded-xl bg-pastel-pink-dark/20 text-rose-900 text-sm font-medium"
+                    >Kerjasama Tim</span
+                  >
+                  <span
+                    class="px-3 py-1.5 rounded-xl bg-pastel-blue-soft text-blue-900 text-sm font-medium"
+                    >Berpikir Analitis</span
+                  >
+                  <span
+                    class="px-3 py-1.5 rounded-xl bg-pastel-green text-emerald-900 text-sm font-medium"
+                    >Komunikasi</span
+                  >
+                  <span
+                    class="px-3 py-1.5 rounded-xl bg-pastel-yellow text-amber-900 text-sm font-medium"
+                    >Manajemen Waktu</span
+                  >
+                  <span
+                    class="px-3 py-1.5 rounded-xl bg-pastel-pink-dark/20 text-rose-900 text-sm font-medium"
+                    >Ketelitian</span
+                  >
+                  <span
+                    class="px-3 py-1.5 rounded-xl bg-pastel-blue-soft text-blue-900 text-sm font-medium"
+                    >Koordinasi Acara</span
+                  >
+                  <span
+                    class="px-3 py-1.5 rounded-xl bg-pastel-green text-emerald-900 text-sm font-medium"
+                    >Problem Solving</span
+                  >
+                  <span
+                    class="px-3 py-1.5 rounded-xl bg-pastel-yellow text-amber-900 text-sm font-medium"
+                    >Adaptibilitas</span
+                  >
+                </div>
+              </div>
+
+              <!-- Certification Card (Klik untuk buka Modal 10 Sertifikat) -->
+              <div
+                onclick="openCertificatesModal()"
+                class="bg-gradient-to-r from-amber-50 to-orange-50 hover:from-amber-100 hover:to-orange-100 p-6 rounded-3xl border border-amber-200/80 shadow-sm flex items-center justify-between cursor-pointer group transition-all transform hover:-translate-y-1"
+              >
+                <div class="flex items-center gap-4">
+                  <div
+                    class="w-12 h-12 rounded-2xl bg-amber-200/60 flex-shrink-0 flex items-center justify-center text-amber-700 group-hover:scale-110 transition-transform"
+                  >
+                    <i class="fa-solid fa-award text-2xl"></i>
+                  </div>
+                  <div>
+                    <div class="flex items-center gap-2">
+                      <h4 class="font-bold text-slate-900">
+                        Pelatihan & Sertifikasi
+                      </h4>
+                      <span
+                        class="px-2 py-0.5 rounded-full bg-amber-200 text-amber-900 text-[10px] font-extrabold"
+                        >13 Dokumen</span
+                      >
+                    </div>
+                    <p class="text-xs text-slate-600 mt-1">
+                      Lembaga Sertifikasi Pelatihan, LepKom Gunadarma, dan Lainnya
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="w-9 h-9 rounded-full bg-white text-amber-800 flex items-center justify-center shadow-xs group-hover:bg-amber-500 group-hover:text-white transition-colors"
+                >
+                  <i class="fa-solid fa-arrow-right text-sm"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section id="contact" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div
+            class="bg-gradient-to-br from-pastel-pink/40 via-pastel-blue-soft/40 to-pastel-yellow/40 rounded-3xl p-8 sm:p-12 text-center relative overflow-hidden border border-slate-100 shadow-sm"
+          >
+            <span
+              class="px-3 py-1 rounded-full bg-white text-xs font-bold tracking-wider text-slate-800 uppercase shadow-sm"
+              >Get In Touch</span
+            >
+
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-4">
+              Mari Terhubung!
+            </h2>
+            <p
+              class="text-slate-600 text-sm sm:text-base max-w-xl mx-auto mt-3"
+            >
+              Have a question or an opportunity in mind? Feel free to reach out
+              through the contacts below.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
+              <a
+                href="mailto:velinalivia04@gmail.com"
+                class="p-4 bg-white rounded-2xl border border-slate-100 hover:shadow-md transition-all flex flex-col items-center group"
+              >
+                <i
+                  class="fa-regular fa-envelope text-2xl text-rose-500 mb-2 group-hover:scale-110 transition-transform"
+                ></i>
+                <span class="text-xs text-slate-400 font-medium">Email</span>
+                <span class="text-xs font-semibold text-slate-800 mt-1"
+                  >velinalivia04@gmail.com</span
+                >
+              </a>
+
+              <a
+                href="https://wa.me/+6282311808615"
+                class="p-4 bg-white rounded-2xl border border-slate-100 hover:shadow-md transition-all flex flex-col items-center group"
+              >
+                <i
+                  class="fa-solid fa-phone text-2xl text-emerald-500 mb-2 group-hover:scale-110 transition-transform"
+                ></i>
+                <span class="text-xs text-slate-400 font-medium"
+                  >Telepon / WhatsApp</span
+                >
+                <span class="text-xs font-semibold text-slate-800 mt-1"
+                  >0823-1180-8615</span
+                >
+              </a>
+
+              <a
+                href="https://linkedin.com/in/velinaliviaputri"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="p-4 bg-white rounded-2xl border border-slate-100 hover:shadow-md transition-all flex flex-col items-center group"
+              >
+                <i
+                  class="fa-brands fa-linkedin text-2xl text-blue-600 mb-2 group-hover:scale-110 transition-transform"
+                ></i>
+                <span class="text-xs text-slate-400 font-medium">LinkedIn</span>
+                <span class="text-xs font-semibold text-slate-800 mt-1"
+                  >velinaliviaputri</span
+                >
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-pastel-bg py-8 border-t border-slate-200/60">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <p class="text-xs text-slate-500">
+          &copy; 2026 Velin Alivia Putri. Built with HTML5 & Tailwind CSS.
+        </p>
+      </div>
+    </footer>
+
+    <!-- MODAL 13 SERTIFIKAT PELATIHAN -->
+    <div
+      id="cert-modal"
+      class="fixed inset-0 bg-slate-900/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4 sm:p-6"
+      onclick="closeCertificatesModal()"
+    >
+      <div
+        class="relative max-w-5xl w-full bg-white rounded-3xl shadow-2xl overflow-hidden max-h-[90vh] flex flex-col"
+        onclick="event.stopPropagation()"
+      >
+        <!-- Modal Header -->
+        <div
+          class="px-6 py-5 bg-gradient-to-r from-pastel-pink/50 via-pastel-blue-soft/50 to-pastel-yellow/50 border-b border-slate-100 flex items-center justify-between"
+        >
+          <div>
+            <h3
+              class="text-xl font-bold text-slate-900 flex items-center gap-2"
+            >
+              <i class="fa-solid fa-certificate text-amber-500"></i>
+              Dokumen Sertifikasi Pelatihan
+            </h3>
+            <p class="text-xs text-slate-600 mt-0.5">
+              Berikut adalah kumpulan sertifikat resmi.
+            </p>
+          </div>
+          <button
+            onclick="closeCertificatesModal()"
+            class="w-9 h-9 rounded-full bg-white/80 hover:bg-white text-slate-700 hover:text-slate-900 flex items-center justify-center transition-colors shadow-xs"
+          >
+            <i class="fa-solid fa-xmark text-lg"></i>
+          </button>
+        </div>
+
+        <!-- Modal Scrollable Content (Grid 13 Sertifikat) -->
+        <div
+          class="p-6 overflow-y-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
+        >
+          <!-- Sertifikat 1 -->
+          <div
+            class="bg-slate-50 rounded-2xl p-4 border border-slate-200/80 hover:shadow-md transition-shadow group"
+          >
+            <div
+              class="relative h-40 rounded-xl overflow-hidden bg-slate-200 border border-slate-200 mb-3 cursor-pointer"
+              onclick="
+                openLightbox(
+                  'images/sertif1.jpg',
+                  'Sertifikat Basic Web Application Design',
+                )
+              "
+            >
+              <img
+                src="images/sertif1.jpg"
+                alt="Sertifikat 1"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                onerror="
+                  this.src =
+                    'https://placehold.co/400x300/FFF5BA/2D3748?text=Sertifikat+1'
+                "
+              />
+              <div
+                class="absolute inset-0 bg-slate-900/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold"
+              >
+                <i class="fa-solid fa-magnifying-glass-plus mr-1.5"></i> Lihat
+                Dokumen
+              </div>
+            </div>
+            <span
+              class="px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-bold"
+              >LSP</span
+            >
+            <h4 class="font-bold text-sm text-slate-800 mt-1">
+              Junior Web Programmer
+            </h4>
+            <p class="text-xs text-slate-500 mt-0.5">
+              Lembaga Sertifikasi Profesi (LSP)
+            </p>
+          </div>
+
+          <!-- Sertifikat 2 -->
+          <div
+            class="bg-slate-50 rounded-2xl p-4 border border-slate-200/80 hover:shadow-md transition-shadow group"
+          >
+            <div
+              class="relative h-40 rounded-xl overflow-hidden bg-slate-200 border border-slate-200 mb-3 cursor-pointer"
+              onclick="
+                openLightbox(
+                  'images/sertif2.jpg',
+                  'Sertifikat Basic Web Application Development',
+                )
+              "
+            >
+              <img
+                src="images/sertif2.jpg"
+                alt="Sertifikat Basic Web Application Development"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                onerror="
+                  this.src =
+                    'https://placehold.co/400x300/FFF5BA/2D3748?text=Sertifikat+2'
+                "
+              />
+              <div
+                class="absolute inset-0 bg-slate-900/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold"
+              >
+                <i class="fa-solid fa-magnifying-glass-plus mr-1.5"></i> Lihat
+                Dokumen
+              </div>
+            </div>
+            <span
+              class="px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-bold"
+              >LSP</span
+            >
+            <h4 class="font-bold text-sm text-slate-800 mt-1">
+              Junior Web Programmer
+            </h4>
+            <p class="text-xs text-slate-500 mt-0.5">
+              Lembaga Sertifikasi Profesi (LSP)
+            </p>
+          </div>
+
+          <!-- Sertifikat 3 -->
+          <div
+            class="bg-slate-50 rounded-2xl p-4 border border-slate-200/80 hover:shadow-md transition-shadow group"
+          >
+            <div
+              class="relative h-40 rounded-xl overflow-hidden bg-slate-200 border border-slate-200 mb-3 cursor-pointer"
+              onclick="
+                openLightbox(
+                  'images/sertif3.jpg',
+                  'Sertifikat Kursus LepKom - Universitas Gunadarma',
+                )
+              "
+            >
+              <img
+                src="images/sertif3.jpg"
+                alt="Sertifikat C# for Beginner"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                onerror="
+                  this.src =
+                    'https://placehold.co/400x300/FDE2E4/2D3748?text=Sertifikat+3'
+                "
+              />
+              <div
+                class="absolute inset-0 bg-slate-900/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold"
+              >
+                <i class="fa-solid fa-magnifying-glass-plus mr-1.5"></i> Lihat
+                Dokumen
+              </div>
+            </div>
+            <span
+              class="px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-800 text-[10px] font-bold"
+              >LepKom</span
+            >
+            <h4 class="font-bold text-sm text-slate-800 mt-1">
+              C# for Beginner
+            </h4>
+            <p class="text-xs text-slate-500 mt-0.5">
+              LepKom Universitas Gunadarma
+            </p>
+          </div>
+
+          <!-- Sertifikat 4 -->
+          <div
+            class="bg-slate-50 rounded-2xl p-4 border border-slate-200/80 hover:shadow-md transition-shadow group"
+          >
+            <div
+              class="relative h-40 rounded-xl overflow-hidden bg-slate-200 border border-slate-200 mb-3 cursor-pointer"
+              onclick="
+                openLightbox(
+                  'images/sertif4.jpg',
+                  'Sertifikat Kursus LepKom - Universitas Gunadarma',
+                )
+              "
+            >
+              <img
+                src="images/sertif4.jpg"
+                alt="Sertifikat C# for Intermediate"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                onerror="
+                  this.src =
+                    'https://placehold.co/400x300/FDE2E4/2D3748?text=Sertifikat+4'
+                "
+              />
+              <div
+                class="absolute inset-0 bg-slate-900/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold"
+              >
+                <i class="fa-solid fa-magnifying-glass-plus mr-1.5"></i> Lihat
+                Dokumen
+              </div>
+            </div>
+            <span
+              class="px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-800 text-[10px] font-bold"
+              >LepKom</span
+            >
+            <h4 class="font-bold text-sm text-slate-800 mt-1">
+              C# for Intermediate
+            </h4>
+            <p class="text-xs text-slate-500 mt-0.5">
+              LepKom Universitas Gunadarma
+            </p>
+          </div>
+
+          <!-- Sertifikat 5 -->
+          <div
+            class="bg-slate-50 rounded-2xl p-4 border border-slate-200/80 hover:shadow-md transition-shadow group"
+          >
+            <div
+              class="relative h-40 rounded-xl overflow-hidden bg-slate-200 border border-slate-200 mb-3 cursor-pointer"
+              onclick="
+                openLightbox(
+                  'images/sertif5.jpg',
+                  'Sertifikat Kursus LepKom - Universitas Gunadarma',
+                )
+              "
+            >
+              <img
+                src="images/sertif5.jpg"
+                alt="Sertifikat GO for Beginner"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                onerror="
+                  this.src =
+                    'https://placehold.co/400x300/FDE2E4/2D3748?text=Sertifikat+5'
+                "
+              />
+              <div
+                class="absolute inset-0 bg-slate-900/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold"
+              >
+                <i class="fa-solid fa-magnifying-glass-plus mr-1.5"></i> Lihat
+                Dokumen
+              </div>
+            </div>
+            <span
+              class="px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-800 text-[10px] font-bold"
+              >LepKom</span
+            >
+            <h4 class="font-bold text-sm text-slate-800 mt-1">
+              GO for Beginner
+            </h4>
+            <p class="text-xs text-slate-500 mt-0.5">
+              LepKom Universitas Gunadarma
+            </p>
+          </div>
+
+          <!-- Sertifikat 6 -->
+          <div
+            class="bg-slate-50 rounded-2xl p-4 border border-slate-200/80 hover:shadow-md transition-shadow group"
+          >
+            <div
+              class="relative h-40 rounded-xl overflow-hidden bg-slate-200 border border-slate-200 mb-3 cursor-pointer"
+              onclick="
+                openLightbox(
+                  'images/sertif6.jpg',
+                  'Sertifikat Kursus LepKom - Universitas Gunadarma',
+                )
+              "
+            >
+              <img
+                src="images/sertif6.jpg"
+                alt="Sertifikat GO for Intermediate"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                onerror="
+                  this.src =
+                    'https://placehold.co/400x300/FDE2E4/2D3748?text=Sertifikat+6'
+                "
+              />
+              <div
+                class="absolute inset-0 bg-slate-900/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold"
+              >
+                <i class="fa-solid fa-magnifying-glass-plus mr-1.5"></i> Lihat
+                Dokumen
+              </div>
+            </div>
+            <span
+              class="px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-800 text-[10px] font-bold"
+              >LepKom</span
+            >
+            <h4 class="font-bold text-sm text-slate-800 mt-1">
+              GO for Intermediate
+            </h4>
+            <p class="text-xs text-slate-500 mt-0.5">
+              LepKom Universitas Gunadarma
+            </p>
+          </div>
+
+          <!-- Sertifikat 7 -->
+          <div
+            class="bg-slate-50 rounded-2xl p-4 border border-slate-200/80 hover:shadow-md transition-shadow group"
+          >
+            <div
+              class="relative h-40 rounded-xl overflow-hidden bg-slate-200 border border-slate-200 mb-3 cursor-pointer"
+              onclick="
+                openLightbox(
+                  'images/sertif7.jpg',
+                  'Sertifikat Data Analytics & Power BI',
+                )
+              "
+            >
+              <img
+                src="images/sertif7.jpg"
+                alt="Sertifikat 4"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                onerror="
+                  this.src =
+                    'https://placehold.co/400x300/E2F0CB/2D3748?text=Sertifikat+7'
+                "
+              />
+              <div
+                class="absolute inset-0 bg-slate-900/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold"
+              >
+                <i class="fa-solid fa-magnifying-glass-plus mr-1.5"></i> Lihat
+                Dokumen
+              </div>
+            </div>
+            <span
+              class="px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-800 text-[10px] font-bold"
+              >Workshop</span
+            >
+            <h4 class="font-bold text-sm text-slate-800 mt-1">
+              JavaScript Programming Language Fundamental
+            </h4>
+            <p class="text-xs text-slate-500 mt-0.5">
+              Lembaga Pengembangan Universitas Gunadarma
+            </p>
+          </div>
+
+          <!-- Sertifikat 8 -->
+          <div
+            class="bg-slate-50 rounded-2xl p-4 border border-slate-200/80 hover:shadow-md transition-shadow group"
+          >
+            <div
+              class="relative h-40 rounded-xl overflow-hidden bg-slate-200 border border-slate-200 mb-3 cursor-pointer"
+              onclick="
+                openLightbox(
+                  'images/sertif8.jpg',
+                  'Sertifikat Kursus LepKom - Universitas Gunadarma',
+                )
+              "
+            >
+              <img
+                src="images/sertif8.jpg"
+                alt="Sertifikat Fundamental Web Programming"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                onerror="
+                  this.src =
+                    'https://placehold.co/400x300/FDE2E4/2D3748?text=Sertifikat+8'
+                "
+              />
+              <div
+                class="absolute inset-0 bg-slate-900/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold"
+              >
+                <i class="fa-solid fa-magnifying-glass-plus mr-1.5"></i> Lihat
+                Dokumen
+              </div>
+            </div>
+            <span
+              class="px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-800 text-[10px] font-bold"
+              >LepKom</span
+            >
+            <h4 class="font-bold text-sm text-slate-800 mt-1">
+              Fundamental Web Programming
+            </h4>
+            <p class="text-xs text-slate-500 mt-0.5">
+              LepKom Universitas Gunadarma
+            </p>
+          </div>
+
+          <!-- Sertifikat 9 -->
+          <div
+            class="bg-slate-50 rounded-2xl p-4 border border-slate-200/80 hover:shadow-md transition-shadow group"
+          >
+            <div
+              class="relative h-40 rounded-xl overflow-hidden bg-slate-200 border border-slate-200 mb-3 cursor-pointer"
+              onclick="
+                openLightbox(
+                  'images/sertif9.jpg',
+                  'Sertifikat Kursus LepKom - Universitas Gunadarma',
+                )
+              "
+            >
+              <img
+                src="images/sertif9.jpg"
+                alt="Sertifikat Fundamental Desktop Programming"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                onerror="
+                  this.src =
+                    'https://placehold.co/400x300/FDE2E4/2D3748?text=Sertifikat+9'
+                "
+              />
+              <div
+                class="absolute inset-0 bg-slate-900/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold"
+              >
+                <i class="fa-solid fa-magnifying-glass-plus mr-1.5"></i> Lihat
+                Dokumen
+              </div>
+            </div>
+            <span
+              class="px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-800 text-[10px] font-bold"
+              >LepKom</span
+            >
+            <h4 class="font-bold text-sm text-slate-800 mt-1">
+              Fundamental Desktop Programming
+            </h4>
+            <p class="text-xs text-slate-500 mt-0.5">
+              LepKom Universitas Gunadarma
+            </p>
+          </div>
+
+          <!-- Sertifikat 10 -->
+          <div
+            class="bg-slate-50 rounded-2xl p-4 border border-slate-200/80 hover:shadow-md transition-shadow group"
+          >
+            <div
+              class="relative h-40 rounded-xl overflow-hidden bg-slate-200 border border-slate-200 mb-3 cursor-pointer"
+              onclick="
+                openLightbox(
+                  'images/sertif10.jpg',
+                  'Certificate by Coursera',
+                )
+              "
+            >
+              <img
+                src="images/sertif10.jpg"
+                alt="Sertifikat Coursera"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                onerror="
+                  this.src =
+                    'https://placehold.co/400x300/FFF5BA/2D3748?text=Sertifikat+10'
+                "
+              />
+              <div
+                class="absolute inset-0 bg-slate-900/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold"
+              >
+                <i class="fa-solid fa-magnifying-glass-plus mr-1.5"></i> Lihat
+                Dokumen
+              </div>
+            </div>
+            <span
+              class="px-2.5 py-0.5 rounded-full bg-slate-200 text-slate-800 text-[10px] font-bold"
+              >Kursus</span
+            >
+            <h4 class="font-bold text-sm text-slate-800 mt-1">
+              Introduction to Front-End Development
+            </h4>
+            <p class="text-xs text-slate-500 mt-0.5">
+              Coursera
+            </p>
+          </div>
+
+          <!-- Sertifikat 11 -->
+          <div
+            class="bg-slate-50 rounded-2xl p-4 border border-slate-200/80 hover:shadow-md transition-shadow group"
+          >
+            <div
+              class="relative h-40 rounded-xl overflow-hidden bg-slate-200 border border-slate-200 mb-3 cursor-pointer"
+              onclick="
+                openLightbox(
+                  'images/sertif11.jpg',
+                  'Sertifikat Seminar TechnoFair 11.0',
+                )
+              "
+            >
+              <img
+                src="images/sertif11.jpg"
+                alt="Sertifikat Seminar"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                onerror="
+                  this.src =
+                    'https://placehold.co/400x300/D0E1FD/2D3748?text=Sertifikat+11'
+                "
+              />
+              <div
+                class="absolute inset-0 bg-slate-900/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold"
+              >
+                <i class="fa-solid fa-magnifying-glass-plus mr-1.5"></i> Lihat
+                Dokumen
+              </div>
+            </div>
+            <span
+              class="px-2.5 py-0.5 rounded-full bg-slate-200 text-sky-800 text-[10px] font-bold"
+              >Seminar</span
+            >
+            <h4 class="font-bold text-sm text-slate-800 mt-1">
+              Artificial Intellegence Seminar
+            </h4>
+            <p class="text-xs text-slate-500 mt-0.5">
+               TechnoFair 11.0
+            </p>
+          </div>
+
+          <!-- Sertifikat 12 -->
+          <div
+            class="bg-slate-50 rounded-2xl p-4 border border-slate-200/80 hover:shadow-md transition-shadow group"
+          >
+            <div
+              class="relative h-40 rounded-xl overflow-hidden bg-slate-200 border border-slate-200 mb-3 cursor-pointer"
+              onclick="
+                openLightbox(
+                  'images/SK12.jpg',
+                  'Surat Keterangan Magang HCM Telkomsel 2025',
+                )
+              "
+            >
+              <img
+                src="images/SK12.jpg"
+                alt="Surat Keterangan"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                onerror="
+                  this.src =
+                    'https://placehold.co/400x300/FDE2E4/2D3748?text=Sertifikat+12'
+                "
+              />
+              <div
+                class="absolute inset-0 bg-slate-900/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold"
+              >
+                <i class="fa-solid fa-magnifying-glass-plus mr-1.5"></i> Lihat
+                Dokumen
+              </div>
+            </div>
+            <span
+              class="px-2.5 py-0.5 rounded-full bg-rose-100 text-rose-800 text-[10px] font-bold"
+              >Internship</span
+            >
+            <h4 class="font-bold text-sm text-slate-800 mt-1">
+              Surat Keterangan Magang Telkomsel
+            </h4>
+            <p class="text-xs text-slate-500 mt-0.5">
+              Human Capital Management (2025)
+            </p>
+          </div>
+
+          <!-- Sertifikat 13 -->
+          <div
+            class="bg-slate-50 rounded-2xl p-4 border border-slate-200/80 hover:shadow-md transition-shadow group"
+          >
+            <div
+              class="relative h-40 rounded-xl overflow-hidden bg-slate-200 border border-slate-200 mb-3 cursor-pointer"
+              onclick="
+                openLightbox(
+                  'images/sertif13.jpeg',
+                  'Piagam Penghargaan Volunteer BEM FIKTI Space 3.0',
+                )
+              "
+            >
+              <img
+                src="images/sertif13.jpeg"
+                alt="Piagam Penghargaan"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                onerror="
+                  this.src =
+                    'https://placehold.co/400x300/E8F5E9/2D3748?text=Sertifikat+13'
+                "
+              />
+              <div
+                class="absolute inset-0 bg-slate-900/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold"
+              >
+                <i class="fa-solid fa-magnifying-glass-plus mr-1.5"></i> Lihat
+                Dokumen
+              </div>
+            </div>
+            <span
+              class="px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-bold"
+              >Organisasi</span
+            >
+            <h4 class="font-bold text-sm text-slate-800 mt-1">
+              Panitia FIKTI Space 3.0
+            </h4>
+            <p class="text-xs text-slate-500 mt-0.5">
+              BEM FIKTI Universitas Gunadarma
+            </p>
+          </div>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="px-6 py-4 bg-slate-50 border-t border-slate-100 text-right">
+          <button
+            onclick="closeCertificatesModal()"
+            class="px-5 py-2.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold transition-colors"
+          >
+            Tutup Window
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- LIGHTBOX MODAL UNTUK PREVIEW FOTO DOKUMENTASI -->
+    <div
+      id="lightbox"
+      class="fixed inset-0 bg-slate-900/80 backdrop-blur-sm z-[60] hidden flex items-center justify-center p-4"
+      onclick="closeLightbox()"
+    >
+      <div
+        class="relative max-w-4xl w-full bg-white rounded-3xl overflow-hidden shadow-2xl"
+        onclick="event.stopPropagation()"
+      >
+        <button
+          onclick="closeLightbox()"
+          class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-900/60 text-white hover:bg-slate-900 flex items-center justify-center z-10 transition-colors"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div
+          class="p-2 bg-slate-900 flex items-center justify-center max-h-[75vh]"
+        >
+          <img
+            id="lightbox-img"
+            src=""
+            alt="Documentation Preview"
+            class="max-h-[70vh] w-auto object-contain rounded-xl"
+          />
+        </div>
+        <div class="p-4 bg-white border-t border-slate-100 text-center">
+          <p
+            id="lightbox-caption"
+            class="text-sm font-semibold text-slate-800"
+          ></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Toggle & Modal Scripts -->
+    <script>
+      const menuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const menuIcon = document.getElementById("menu-icon");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        if (mobileMenu.classList.contains("hidden")) {
+          menuIcon.classList.remove("fa-xmark");
+          menuIcon.classList.add("fa-bars");
+        } else {
+          menuIcon.classList.remove("fa-bars");
+          menuIcon.classList.add("fa-xmark");
+        }
+      });
+
+      // Close mobile drawer when link is clicked
+      document.querySelectorAll("#mobile-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          menuIcon.classList.remove("fa-xmark");
+          menuIcon.classList.add("fa-bars");
+        });
+      });
+
+      // Certificates Modal Handlers
+      function openCertificatesModal() {
+        document.getElementById("cert-modal").classList.remove("hidden");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeCertificatesModal() {
+        document.getElementById("cert-modal").classList.add("hidden");
+        document.body.style.overflow = "auto";
+      }
+
+      // Lightbox Functionality
+      function openLightbox(imgSrc, caption) {
+        document.getElementById("lightbox-img").src = imgSrc;
+        document.getElementById("lightbox-caption").innerText = caption;
+        document.getElementById("lightbox").classList.remove("hidden");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeLightbox() {
+        document.getElementById("lightbox").classList.add("hidden");
+        // Hanya hidupkan kembali scroll jika modal sertifikat juga sedang tertutup
+        if (
+          document.getElementById("cert-modal").classList.contains("hidden")
+        ) {
+          document.body.style.overflow = "auto";
+        }
+      }
+    </script>
+  </body>
+</html>
